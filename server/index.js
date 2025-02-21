@@ -8,6 +8,8 @@ const path = require('path');
 const http = require('http');
 const socket = require('socket.io');
 
+
+
 // Load environment variables
 dotenv.config(); 
 
@@ -48,7 +50,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-mongoose.connect('mongodb://localhost:27017/News', {})
+mongoose.connect("mongodb+srv://rohanambig585:LaLtTKYCG3fB4o0P@cluster0.mz76f.mongodb.net/", {})
   .then(() => {
     console.log("Database connected successfully");
 
